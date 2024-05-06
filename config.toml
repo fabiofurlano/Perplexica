@@ -1,0 +1,11 @@
+[GENERAL]
+PORT = 3001 # Port to run the server on
+SIMILARITY_MEASURE = "cosine" # "cosine" or "dot"
+
+[API_KEYS]
+OPENAI = "" # OpenAI API key - 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
+GROQ = "" # Groq API key - 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
+
+[API_ENDPOINTS]
+SEARXNG = "http://localhost:32768" # SearxNG API URL
+OLLAMA = "" # Ollama API URL - http://host.docker.internal:11434
