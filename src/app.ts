@@ -6,8 +6,6 @@ import routes from './routes';
 import { getPort } from './config';
 import logger from './utils/logger';
 
-const port = getPort();
-
 const app = express();
 const server = http.createServer(app);
 
@@ -22,6 +20,9 @@ app.use('/api', routes);
 app.get('/api', (_, res) => {
   res.status(200).json({ status: 'ok' });
 });
+
+// Retrieve the port from environment variable or default to 3001
+const port = process.env.PORT || getPort() || 3001;
 
 server.listen(port, () => {
   logger.info(`Server is running on port ${port}`);
